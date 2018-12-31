@@ -1,1 +1,24 @@
+---
+title: "My First Map"
+author: Chandu Dugyala
+output: html_document
+---
+
+## Environment Setup
+
+```{r}
+library(leaflet)
+map <- leaflet() %>% addTiles()
+```
+
+# Create a link to thousand pillars temple
+```{r}
+ThousandPillar <- c("<a href= 'https://telanganatourism.gov.in/partials/destinations/divine-destinations/warangal-urban/thousand-pillars-temple.html' >ThousandPillar</a>")
+leaflet() %>%
+addTiles() %>%
+addMarkers(lat=18.0037013, lng=79.5725835, popup = ThousandPillar)
+)
+```
+
+
 
