@@ -8,7 +8,11 @@ output: html_document
 
 ```{r}
 library(leaflet)
-map <- leaflet() %>% addTiles()
+```
+## Creating the thousand pillar temple map
+```{r}
+my_map <- leaflet() %>% 
+addTiles()
 ```
 
 # Create a link to thousand pillars temple
@@ -17,8 +21,4 @@ ThousandPillar <- c("<a href= 'https://telanganatourism.gov.in/partials/destinat
 leaflet() %>%
 addTiles() %>%
 addMarkers(lat=18.0037013, lng=79.5725835, popup = ThousandPillar)
-)
 ```
-
-
-
